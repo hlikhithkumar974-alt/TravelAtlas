@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About Us - TravelAtlas</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body, html {
+        height: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+    }
+    body {
+        background: url('https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3lkbmV5JTIwY2l0eXxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000') no-repeat center center fixed;
+        background-size: cover;
+    }
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 45, 56, 0.7);
+        z-index: 0;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 45, 56, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 30px;
+        z-index: 10;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 20px;
+        color: white;
+    }
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+    .nav-links {
+        display: flex;
+        gap: 25px;
+    }
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        line-height: 1;
+    }
+    .nav-links a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    main {
+        position: relative;
+        z-index: 1;
+        padding: 100px 60px 60px 60px; /* top to avoid nav */
+        max-width: 1100px;
+        margin: 0 auto;
+        min-height: 100vh;
+    }
+    h1.page-title {
+        font-size: 3.5rem;
+        font-weight: 900;
+        margin-bottom: 35px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-align: left;
+    }
+    .about-text {
+        background-color: rgba(0, 41, 52, 0.8);
+        padding: 25px 30px;
+        border-left: 3px solid white;
+        font-size: 16px;
+        line-height: 1.6;
+        max-width: 900px;
+        margin-bottom: 60px;
+        box-shadow: 0 0 15px rgba(0, 41, 52, 0.9);
+    }
+    .about-text strong {
+        font-weight: 700;
+    }
+    .team-section {
+        margin-top: 40px;
+    }
+    .team-title {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-bottom: 35px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .team-cards {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    .team-card {
+        background-color: rgba(0, 41, 52, 0.7);
+        padding: 20px;
+        border-radius: 6px;
+        width: 320px;
+        box-shadow: 0 0 8px rgba(0,41,52,0.9);
+        display: flex;
+        align-items: start;
+        gap: 15px;
+    }
+    .team-icon {
+        background-color: #152a48;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    .team-icon img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .team-info {
+        flex-grow: 1;
+    }
+    .team-name {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+    .team-desc {
+        font-size: 14px;
+        margin-bottom: 12px;
+        opacity: 0.9;
+        min-height: 42px;
+    }
+    .team-role {
+        background-color: #152a48;
+        color: white;
+        font-size: 13px;
+        padding: 7px 18px;
+        border-radius: 20px;
+        font-weight: 600;
+        display: inline-block;
+        user-select: none;
+    }
+    @media (max-width: 1000px) {
+        .team-cards {
+            justify-content: center;
+        }
+    }
+    @media (max-width: 760px) {
+        main {
+            padding: 100px 30px 60px 30px;
+        }
+        .team-cards {
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+        .team-card {
+            width: 90%;
+        }
+    }
+</style>
+</head>
+<body>
+<nav>
+    <div class="logo">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/airplane-take-off.png" alt="Airplane Logo"/>
+        <span>TravelAtlas</span>
+    </div>
+    <div class="nav-links">
+        <a href="travel_atlas.html">Home</a>
+        <a href="travel_atlas2.html">About Us</a>
+        <a href="travel_atlas3.html">Contact Us</a>
+    </div>
+</nav>
+
+<main>
+    <h1 class="page-title">ABOUT US</h1>
+
+    <section class="about-text" aria-label="About the company">
+        <p>
+            Welcome to Our Company! We are a team of passionate individuals dedicated to providing excellent services/products to our customers. 
+            Our mission is to <strong>provide the best experience</strong> for people traveling to different destinations around the world.
+            Our values include integrity, innovation, customer satisfaction, and teamwork. We believe in <strong>putting our customers first and working together</strong> to achieve our goals.
+            Feel free to explore our website to learn more about what we offer!
+        </p>
+    </section>
+
+    <section class="team-section" aria-label="Our team members">
+        <h2 class="team-title">Our Team</h2>
+        <div class="team-cards">
+
+            <article class="team-card" aria-labelledby="member1-name" role="group">
+                <div class="team-icon" aria-hidden="true">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/user-male-circle.png" alt="" />
+                </div>
+                <div class="team-info">
+                    <h3 id="member1-name" class="team-name">Adam</h3>
+                    <p class="team-desc">Adam is responsible for overseeing all company operations and leading the strategic direction.</p>
+                    <span class="team-role">CEO</span>
+                </div>
+            </article>
+
+            <article class="team-card" aria-labelledby="member2-name" role="group">
+                <div class="team-icon" aria-hidden="true">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/user-male-circle.png" alt="" />
+                </div>
+                <div class="team-info">
+                    <h3 id="member2-name" class="team-name">Nikola</h3>
+                    <p class="team-desc">Nikola is responsible for coordinating projects and managing the team’s productivity.</p>
+                    <span class="team-role">Team Lead</span>
+                </div>
+            </article>
+
+            <article class="team-card" aria-labelledby="member3-name" role="group">
+                <div class="team-icon" aria-hidden="true">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/user-female-circle.png" alt="" />
+                </div>
+                <div class="team-info">
+                    <h3 id="member3-name" class="team-name">Elizabeth</h3>
+                    <p class="team-desc">Elizabeth is responsible for ensuring products are delivered efficiently and on time to clients.</p>
+                    <span class="team-role">Delivery Head</span>
+                </div>
+            </article>
+
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

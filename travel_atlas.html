@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TravelAtlas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: url('https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3lkbmV5JTIwY2l0eXxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            position: relative;
+        }
+        nav {
+            width: 100%;
+            background-color: rgba(0, 45, 56, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 20px;
+            color: white;
+        }
+        .logo img {
+            width: 30px;
+            height: 30px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            border-radius: 25px;
+            padding: 5px 10px;
+        }
+        .search-container input[type="text"] {
+            border: none;
+            outline: none;
+            padding: 7px 10px;
+            border-radius: 25px;
+            width: 220px;
+            font-size: 14px;
+            color: #024;
+        }
+        .search-container button {
+            background-color: #0a6c75;
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .search-container button:hover {
+            background-color: #0c8e9a;
+        }
+        .search-container .clear-btn {
+            background-color: #13787f;
+        }
+        .hero-content {
+            position: relative;
+            top: 80px; 
+            padding-left: 5rem;
+            max-width: 600px;
+            height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            line-height: 1.1;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            text-shadow: 0 0 15px rgba(0,0,0,0.7);
+        }
+        p.description {
+            font-size: 15px;
+            line-height: 1.5;
+            max-width: 400px;
+            background-color: rgba(0, 41, 52, 0.7);
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0,41,52,0.9);
+        }
+        .btn-book {
+            background-color: #0a6c75;
+            padding: 12px 35px;
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            width: fit-content;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(10,108,117,0.7);
+            transition: background-color 0.2s ease;
+        }
+        .btn-book:hover {
+            background-color: #0c8e9a;
+        }
+        .social-icons {
+            position: fixed;
+            left: 1px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            z-index: 90;
+        }
+        .social-icons a {
+            display: block;
+            width: 25px;
+            height: 25px;
+            filter: brightness(2) ;
+            transition: filter 0.3s ease;
+        }
+        .social-icons a:hover {
+            filter:invert(0.5) ;
+        }
+        @media (max-width: 720px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content {
+                max-width: 100%;
+                padding-left: 2rem;
+            }
+            .search-container input[type="text"] {
+                width: 140px;
+            }
+            nav {
+                flex-wrap: wrap;
+                gap: 10px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/airplane-take-off.png" alt="Airplane Logo" />
+            <span>TravelAtlas</span>
+        </div>
+        <div class="nav-links">
+            <a href="travel_atlas.html">Home</a>
+            <a href="travel_atlas2.html">About Us</a>
+            <a href="travel_atlas3.html">Contact Us</a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Enter a destination or keyword" id="searchBar" />
+            <button id="searchBtn">Search</button>
+            <button class="clear-btn" id="resetBtn">Clear</button>
+        </div>
+    </nav>
+
+    <div class="hero-content">
+        <h1>EXPLORE<br>DREAM<br>DESTINATION</h1>
+
+        <p class="description">
+            It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.
+        </p>
+
+        <button class="btn-book">BOOK NOW</button>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://twitter.com" target="_blank" title="Twitter">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter--v1.png" alt="Twitter Icon" />
+        </a>
+        <a href="https://facebook.com" target="_blank" title="Facebook">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook--v1.png" alt="Facebook Icon" />
+        </a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram Icon" />
+        </a>
+        <a href="https://youtube.com" target="_blank" title="YouTube">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube Icon" />
+        </a>
+    </div>
+</body>
+</html>
