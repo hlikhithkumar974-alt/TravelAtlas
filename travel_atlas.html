@@ -174,6 +174,8 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="travel_atlas.css">
+
 </head>
 <body>
     <nav>
@@ -188,7 +190,7 @@
         </div>
         <div class="search-container">
             <input type="text" placeholder="Enter a destination or keyword" id="searchBar" />
-            <button id="searchBtn">Search</button>
+            <button id="searchBtn" onclick="searchPlaces()">Search</button>
             <button class="clear-btn" id="resetBtn">Clear</button>
         </div>
     </nav>
@@ -202,6 +204,8 @@
 
         <button class="btn-book">BOOK NOW</button>
     </div>
+    
+       <div id="resultsContainer"></div>
 
     <div class="social-icons">
         <a href="https://twitter.com" target="_blank" title="Twitter">
@@ -217,5 +221,7 @@
             <img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube Icon" />
         </a>
     </div>
+    <script src="travel_atllas.js"></script>
+
 </body>
 </html>
