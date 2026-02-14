@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Signup - TravelAtlas</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1491553895911-0055eca6402d')
+        no-repeat center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: rgba(0, 41, 52, 0.9);
+      padding: 40px;
+      width: 340px;
+      border-radius: 10px;
+      color: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    h2 { text-align: center; margin-bottom: 20px; }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #0a6c75;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover { background: #0c8e9a; }
+
+    .link { text-align: center; margin-top: 15px; }
+    .link a { color: #4fd1c5; text-decoration: none; }
+
+    .error { color: #ff8080; text-align: center; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>Sign Up</h2>
+
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+
+  <button onclick="signup()">Create Account</button>
+
+  <div class="link">
+    Already registered? <a href="login.html">Login</a>
+  </div>
+
+  <div class="error" id="error"></div>
+</div>
+
+<script type="module">
+  import { auth } from './firebase.js';
+  import { createUserWithEmailAndPassword } 
+    from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+  window.signup = function () {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const errorBox = document.getElementById("error");
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(() => window.location.href = "travel_atlas.html")
+      .catch(err => errorBox.innerText = err.message);
+  };
+</script>
+
+</body>
+</html>
